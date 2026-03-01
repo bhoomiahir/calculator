@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  height: 50%;
+  width: 350px;
+  /* display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+  "display display"
+  "number-btns operator"
+  "additional operator"; */
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+#display {
+  /* grid-area: display; */
+  padding: 10px;
+  border: 1.5px solid #e8e8e8;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#display input {
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+  color: #e8e8e8;
+  font-weight: 300;
+  text-align: right;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+/* 
+.number-btns {
+  grid-area: number-btns;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.btn {
+  height: 30%;
+  width: 30%;
+  padding: 5px;
+}
+
+.operators {
+  grid-area: operator;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.op-btn {
+  height: 30%;
+  width: 100%;
+  padding: 5px;
+}
+
+
+
+.additional {
+  grid-area: additional;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px
+}
+
+.additional button {
+  height: 80%;
+  width: 30%;
+  padding: 5px;
+} */
+
+
+
+.btns {
+  height: 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  grid-template-rows: repeat(5, 20.5%);
+  gap: 5px;
+  
+}
+
+.btns button {
+  /* height: 24%;
+  width: 20%; */
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.nunBtn, .additional {
+  background-color: #333438;
+  color: #bfbfbf;
+}
+
+.operator {
+  background-color: #2c303d;
+  color: #eef0ff;
+}
+
+#equalTo  {
+  background-color: #a8c7fa;
+  color: #1f1f1f;
+}
+
+@media (width<450px){
+  .calculator {
+    width: 80%;
+  }
+}
+
+@media (height>667px) {
+  .calculator {
+    height: 40%;
+  }
+}
